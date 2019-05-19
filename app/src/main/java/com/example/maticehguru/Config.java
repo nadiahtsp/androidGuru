@@ -8,14 +8,14 @@ public class Config {
         //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
 //        public static final String BASE_URL = "http://192.168.1.23:8080/Android/maticehCrud/";
-        public static final String BASE_URL = "http://192.168.43.124:81/Android/maticehCrud/";
+        public static final String BASE_URL = "http://192.168.100.9:81/Android/maticehGuru/";
 
-        public static final String URL_ADD_PEMESAN = BASE_URL + "registerPemesan.php/";
         public static final String URL_GET_PEMESAN_ID = BASE_URL + "selectPemesanId.php/";
-        public static final String URL_ADD_PESANAN_BARU = BASE_URL + "insertPesananBaru.php/";
+        public static final String URL_ACC_PESANAN_BARU = BASE_URL + "acceptPesananBaru.php/";
+        public static final String URL_DEC_PESANAN_BARU = BASE_URL + "declinePesananBaru.php/";
         public static final String URL_GET_GURU_ALL = BASE_URL + "selectGuruAll.php/";
         public static final String URL_GET_GURU_ID = BASE_URL + "selectGuruId.php?id=";
-        public static final String URL_GET_LOGIN = BASE_URL + "loginPemesan.php";
+        public static final String URL_GET_LOGIN = BASE_URL + "loginGuru.php";
 //        public static final String URL_UPDATE_USER = BASE_URL + "update.php/";
 //        public static final String URL_DELETE_USER = BASE_URL + "delete.php?id=";
 

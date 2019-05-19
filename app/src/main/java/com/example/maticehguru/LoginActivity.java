@@ -17,7 +17,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-public class loginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     Button btnlogin;
     EditText email;
     EditText pass;
@@ -59,14 +59,14 @@ public class loginActivity extends AppCompatActivity {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(loginActivity.this,"Verifying...","Please wait...",false,false);
+                loading = ProgressDialog.show(LoginActivity.this,"Verifying...","Please wait...",false,false);
             }
 
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-//                Log.d("s contains: ", s);
-//                Toast.makeText(loginActivity.this,s,Toast.LENGTH_LONG).show();
+                Log.d("s contains: ", s);
+                Toast.makeText(LoginActivity.this,s,Toast.LENGTH_LONG).show();
                 loading.dismiss();
                 verify(s);
             }
@@ -91,7 +91,8 @@ public class loginActivity extends AppCompatActivity {
     }
 
     private void verify(String jsonStr){
-        String id, name, email, password, remember_token, alamat, status, role, no_hp, jenis_kelamin, created_at, updated_at;
+        String id, name, email, password, remember_token, alamat, provinsi, kabupatenKota, status, role, no_hp, jenis_kelamin, created_at, updated_at;
+        String direktoriCV, institusi;
         try {
 
 //            Toast.makeText(LoginActivity.this,JSON_STRING,Toast.LENGTH_LONG).show();
@@ -107,19 +108,24 @@ public class loginActivity extends AppCompatActivity {
             password = c.getString("password");
             remember_token = c.getString("remember_token");
             alamat = c.getString("alamat");
+            provinsi = c.getString("provinsi");
+            kabupatenKota = c.getString("kabupatenKota");
             status = c.getString("status");
             role = c.getString("role");
             no_hp = c.getString("no_hp");
             jenis_kelamin = c.getString("jenis_kelamin");
             created_at = c.getString("created_at");
             updated_at = c.getString("updated_at");
+            direktoriCV = c.getString("direktori_cv");
+            institusi = c.getString("institusi");
 //            int statusInt = result.length();
 
             if (!id.equals("null")){
-                Toast.makeText(loginActivity.this,"Welcome "+name,Toast.LENGTH_SHORT).show();
-                Intent intent1 = new Intent(loginActivity.this, MainActivity.class);
+                Toast.makeText(LoginActivity.this,"Welcome "+name,Toast.LENGTH_SHORT).show();
+                Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
 
-                UserModel userModel = new UserModel(id, name, email, password, remember_token, alamat, status, role, no_hp, jenis_kelamin, created_at, updated_at);
+                UserModel userModel = new UserModel(id, name, email, password, remember_token, alamat, provinsi, kabupatenKota, status, role, no_hp, jenis_kelamin, created_at, updated_at);
+                userModel.fillDataGuru(direktoriCV, institusi);
                 intent1.putExtra("currentUser", userModel);
 
 //                UserModel userModel = (UserModel) getIntent().getParcelableExtra("currentUser");
@@ -127,12 +133,13 @@ public class loginActivity extends AppCompatActivity {
                 finish();
             }
             else {
-                Toast.makeText(loginActivity.this,"Wrong email or password",Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this,"Wrong email or password",Toast.LENGTH_SHORT).show();
                 pass.setText("");
 //                Toast.makeText(LoginActivity.this,status,Toast.LENGTH_SHORT).show();
             }
 
         } catch (JSONException e) {
+            Toast.makeText(LoginActivity.this,"Failed to connect",Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
     }
