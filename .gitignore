@@ -35,3 +35,4 @@ mylibrary/src/main/AndroidManifest.xml
 mylibrary/src/main/res/values/strings.xml
 mylibrary/src/test/java/asymalaps/mylibrary/ExampleUnitTest.java
 .idea/misc.xml
+local.properties

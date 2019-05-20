@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.guru_bottomnav_history:
                             selectedFragment = new GuruHistoryFragment();
                             break;
+                        case R.id.guru_bottomnav_listPesanan:
+                            selectedFragment = new GuruListPesananFragment();
+                            break;
 
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.guru_fragment_container,
