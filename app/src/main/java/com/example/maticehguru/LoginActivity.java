@@ -23,8 +23,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText pass;
     String emailStr,passStr;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

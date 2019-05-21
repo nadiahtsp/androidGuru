@@ -13,6 +13,32 @@
         android:textSize="30sp"
         android:text="Ini adalah detail guru"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama pemesan"
+        android:id="@+id/namaPemesanTV"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/provinsiTV"
+        android:text="Provinsi pemesan"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/kabupatenKotaTV"
+        android:text="Kabupaten Kota"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alamatTV"
+        android:text="Alamat"
+        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

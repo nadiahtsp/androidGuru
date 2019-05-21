@@ -17,6 +17,7 @@ public class Config {
         public static final String URL_GET_GURU_ID = BASE_URL + "selectGuruId.php?id=";
         public static final String URL_GET_LOGIN = BASE_URL + "loginGuru.php";
         public static final String URL_GET_ALL_PESANAN = BASE_URL + "selectAllPesanan.php";
+        public static final String URL_ADD_ABSEN_BARU = BASE_URL + "addAbsenBaru.php";
 //        public static final String URL_UPDATE_USER = BASE_URL + "update.php/";
 //        public static final String URL_DELETE_USER = BASE_URL + "delete.php?id=";
 

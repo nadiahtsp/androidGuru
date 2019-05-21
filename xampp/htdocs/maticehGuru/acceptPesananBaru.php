@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (mysqli_query($con, $sql)) {
 			echo 'Pesanan diterima';
 		} else {
-			echo 'Pesanan Gagal, error';
+			echo 'Pesanan tidak dapat diterima, error';
 		}
 	} catch (Exception $e) {
 		echo 'Caught exception: ',  $e->getMessage(), "\n";

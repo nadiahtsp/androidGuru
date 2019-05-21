@@ -27,9 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     try {
         if (mysqli_query($con, $sql)) {
-            echo 'Pesanan Dibatalkan';
+            echo 'Pesanan dibatalkan';
         } else {
-            echo 'Gagal Menolak, error :(';
+            echo 'Pesanan gagal dibatalkan, error :(';
         }
     } catch (Exception $e) {
         echo 'Caught exception: ',  $e->getMessage(), "\n";
