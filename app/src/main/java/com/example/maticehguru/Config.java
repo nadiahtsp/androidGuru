@@ -16,6 +16,7 @@ public class Config {
         public static final String URL_GET_GURU_ALL = BASE_URL + "selectGuruAll.php/";
         public static final String URL_GET_GURU_ID = BASE_URL + "selectGuruId.php?id=";
         public static final String URL_GET_LOGIN = BASE_URL + "loginGuru.php";
+        public static final String URL_GET_ALL_PESANAN = BASE_URL + "selectAllPesanan.php";
 //        public static final String URL_UPDATE_USER = BASE_URL + "update.php/";
 //        public static final String URL_DELETE_USER = BASE_URL + "delete.php?id=";
 
@@ -24,20 +25,30 @@ public class Config {
         public static final String KEY_USER_NAME = "name";
         public static final String KEY_USER_EMAIL = "email";
         public static final String KEY_USER_PASSWORD = "password";
-        public static final String KEY_USER_NOMOR_TELEPON = "nomorTelepon";
-        public static final String KEY_USER_JENIS_KELAMIN = "jenisKelamin";
+        public static final String KEY_USER_NOMOR_TELEPON = "no_hp";
+        public static final String KEY_USER_JENIS_KELAMIN = "jenis_kelamin";
+        public static final String KEY_USER_ALAMAT = "alamat";
+        public static final String KEY_USER_PROVINSI = "provinsi";
+        public static final String KEY_USER_KABUPATEN_KOTA = "kabupatenKota";
+        public static final String KEY_USER_REMEMBER_TOKEN = "remember_token";
+        public static final String KEY_USER_STATUS = "status";
+        public static final String KEY_USER_ROLE = "role";
+        public static final String KEY_USER_CREATED_AT = "created_at";
+        public static final String KEY_USER_UPDATED_AT = "updated_at";
+        public static final String KEY_USER_DIREKTORI_CV = "direktori_cv";
+        public static final String KEY_USER_INSTITUSI = "institusi";
 
+        public static final String KEY_PESANAN_ID = "id";
+        public static final String KEY_PESANAN_ID_GURU = "id_guru";
+        public static final String KEY_PESANAN_ID_PEMESAN = "id_pemesan";
+        public static final String KEY_PESANAN_STATUS = "status";
+        public static final String KEY_PESANAN_CREATED_AT = "created_at";
+        public static final String KEY_PESANAN_UPDATED_AT = "updated_at";
+        public static final String KEY_PESANAN_GURU_NAME = "guru_name";
+        public static final String KEY_PESANAN_PEMESAN_NAME = "pemesan_name";
+        public static final String KEY_PESANAN_PEMESAN_PROVINSI = "pemesan_provinsi";
+        public static final String KEY_PESANAN_PEMESAN_KABUPATEN_KOTA = "pemesan_kabupaten_kota";
+        public static final String KEY_PESANAN_PEMESAN_ALAMAT = "pemesan_alamat";
         //JSON Tags
         public static final String TAG_JSON_ARRAY = "result";
-        public static final String TAG_ID = "id";
-        public static final String TAG_NAME = "name";
-        public static final String TAG_EMAIL = "email";
-        public static final String TAG_PASSWORD = "password";
-        public static final String TAG_NOMOR_TELEPON = "nomorTelepon";
-        public static final String TAG_JENIS_KELAMIN = "jenisKelamin";
-
-
-        //ID karyawan
-        //emp itu singkatan dari Employee
-        public static final String USER_ID = "id";
 }

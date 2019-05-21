@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+/.idea
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
@@ -15,7 +16,6 @@
 .externalNativeBuild
 .idea/misc.xml
 .idea/gradle.xml
-app/src/main/java/com/tabbedtraining/rafi/maticehandroid/Config.java
 mylibrary/build.gradle
 mylibrary/proguard-rules.pro
 mylibrary/src/androidTest/java/asymalaps/mylibrary/ExampleInstrumentedTest.java
@@ -31,8 +31,6 @@ mylibrary/src/test/java/asymalaps/mylibrary/ExampleUnitTest.java
 mylibrary/build.gradle
 mylibrary/proguard-rules.pro
 mylibrary/src/androidTest/java/asymalaps/mylibrary/ExampleInstrumentedTest.java
-mylibrary/src/main/AndroidManifest.xml
 mylibrary/src/main/res/values/strings.xml
 mylibrary/src/test/java/asymalaps/mylibrary/ExampleUnitTest.java
-.idea/misc.xml
 local.properties

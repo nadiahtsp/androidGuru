@@ -8,16 +8,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:id="@+id/namaPemesanTV"/>
+        android:id="@+id/namaPemesanTV"
+        android:text="nama pemesan"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/provinsiTV"/>
+        android:id="@+id/provinsiTV"
+        android:text="provinsi pemesan"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/kabupatenKotaTV"/>
+        android:id="@+id/kabupatenKotaTV"
+        android:text="kabupaten kota pemesan"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="accept"
+        android:id="@+id/btnAccept"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="decline"
+        android:id="@+id/btnDecline"/>
 
 </LinearLayout>

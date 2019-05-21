@@ -18,13 +18,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 //    id, name, email, password, remember_token, alamat, status, role, no_hp, jenis_kelamin, created_at, updated_at;
 
-    private ArrayList<UserModel> guruModels = new ArrayList<>();
+    private ArrayList<PesananModel> pesananModels = new ArrayList<>();
     private UserModel currentUser;
     private Context mContext;
 
-    public RecyclerViewAdapter(ArrayList<UserModel> guruModels, Context mContext, UserModel currentUser) {
+    public RecyclerViewAdapter(ArrayList<PesananModel> pesananModels, Context mContext, UserModel currentUser) {
         this.currentUser = currentUser;
-        this.guruModels = guruModels;
+        this.pesananModels = pesananModels;
         this.mContext = mContext;
     }
 
@@ -41,20 +41,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         Log.d(TAG, "onBindViewHolder: called");
 //        viewHolder.teacherNameTV.setText(mTeacherName.get(position));
 //        viewHolder.institusiTV.setText(mTeacherInstitution.get(position));
-
-        viewHolder.namaPemesanTV.setText(guruModels.get(position).getName());
-        viewHolder.provinsiTV.setText(guruModels.get(position).getInstitusi());
-        viewHolder.kabupatenKotaTV.setText(guruModels.get(position).getAlamat());
+        viewHolder.namaPemesanTV.setText(pesananModels.get(position).getPemesan_name());
+        viewHolder.kabupatenKotaTV.setText(pesananModels.get(position).getPemesan_kabupaten_kota());
+        viewHolder.provinsiTV.setText(pesananModels.get(position).getPemesan_provinsi());
 
         viewHolder.listPesananLL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, DetailPesanan.class);
                 intent.putExtra("currentUser", currentUser);
-                intent.putExtra("currentGuru", guruModels.get(position));
+                intent.putExtra("currentPesanan", pesananModels.get(position));
 
-                Log.d(TAG, "onBindViewHolder: id guru = "+ guruModels.get(position).getId());
-                Log.d(TAG, "onBindViewHolder: id pemesan = "+ currentUser.getId());
+                Log.d(TAG, "onBindViewHolder: id pemesan = "+ pesananModels.get(position).getId_pemesan());
 //                Toast.makeText(mContext, "id guru = "+ id + "/n id pemesan = " + currentUser.getId(), Toast.LENGTH_LONG).show();
 
                 mContext.startActivity(intent);
@@ -64,7 +62,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return guruModels.size();
+        return pesananModels.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
