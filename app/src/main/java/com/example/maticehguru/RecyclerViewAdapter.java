@@ -31,7 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Log.d(TAG, "onCreateViewHolder: called");
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_fragment_list_pesanan, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_pesanan, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -77,7 +77,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             namaPemesanTV = itemView.findViewById(R.id.namaPemesanTV);
             provinsiTV = itemView.findViewById(R.id.provinsiTV);
-            provinsiTV = itemView.findViewById(R.id.provinsiTV);
+            kabupatenKotaTV = itemView.findViewById(R.id.kabupatenKotaTV);
         }
     }
 }

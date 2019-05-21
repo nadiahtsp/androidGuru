@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 Log.d("s contains: ", s);
-                Toast.makeText(LoginActivity.this,s,Toast.LENGTH_LONG).show();
+//                Toast.makeText(LoginActivity.this,s,Toast.LENGTH_LONG).show();
                 loading.dismiss();
                 verify(s);
             }

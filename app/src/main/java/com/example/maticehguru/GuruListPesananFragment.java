@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,9 +23,10 @@ import java.util.HashMap;
 
 public class GuruListPesananFragment extends Fragment {
     RecyclerView listPesananRV;
-    ArrayList<PesananModel> pesananModels;
+    ArrayList<PesananModel> pesananModels = new ArrayList<>();
     UserModel currentUser;
     Intent currentIntent;
+    private static final String TAG = "GuruListPesananFragment";
 
     @Nullable
     @Override
@@ -36,13 +38,22 @@ public class GuruListPesananFragment extends Fragment {
         return view;
     }
 
+    private void initRecyclerView(){
+        Log.d(TAG, "initRecyclerView: called");
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(this.pesananModels, getActivity(), this.currentUser);
+        listPesananRV.setAdapter(recyclerViewAdapter);
+        listPesananRV.setLayoutManager(new LinearLayoutManager(getActivity()));
+    }
+
     private void init(View view){
+        Log.d(TAG, "init: called");
         listPesananRV = view.findViewById(R.id.listPesananRV);
         currentIntent = getActivity().getIntent();
         currentUser = currentIntent.getParcelableExtra("currentUser");
     }
 
     private void getJSON() {
+        Log.d(TAG, "getJSON: called");
         class GetJSON extends AsyncTask<Void, Void, String> {
             String JSON_STRING;
             ProgressDialog loading;
@@ -77,6 +88,7 @@ public class GuruListPesananFragment extends Fragment {
     }
 
     private void fetchPesanan(String JSON_STRING){
+        Log.d(TAG, "fetchPesanan: called");
         JSONObject jsonObject = null;
         try {
             jsonObject = new JSONObject(JSON_STRING);
@@ -103,12 +115,14 @@ public class GuruListPesananFragment extends Fragment {
 
                 PesananModel pesananModel = new PesananModel(id, id_guru, id_pemesan, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat);
                 pesananModels.add(pesananModel);
+                Log.d(TAG, "fetchPesanan: id_pemesan: "+pesananModel.getId_pemesan());
             }
 
-//            Log.d("guruModels.size : ", Integer.toString(this.pesananModels.size()));
+            Log.d("pesananModels.size : ", Integer.toString(this.pesananModels.size()));
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        initRecyclerView();
     }
 }
