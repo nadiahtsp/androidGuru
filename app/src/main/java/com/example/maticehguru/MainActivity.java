@@ -1,5 +1,6 @@
 package com.example.maticehguru;
 
+import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -40,11 +41,17 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.guru_bottomnav_listPesanan:
                             selectedFragment = new GuruListPesananFragment();
                             break;
+                        case R.id.guru_bottomnav_notification:
+                            selectedFragment = new GuruNotifikasiFragment();
+                            break;
+
+
 
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.guru_fragment_container,
                             selectedFragment).commit();
                     return true;
+
                 }
             };
 }

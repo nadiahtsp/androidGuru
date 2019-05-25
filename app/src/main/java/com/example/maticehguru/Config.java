@@ -7,8 +7,8 @@ public class Config {
         //dimana File PHP tersebut berada
         //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
-        public static final String BASE_URL = "http://192.168.1.25:8080/Android/maticehGuru/";
-//        public static final String BASE_URL = "http://192.168.100.9:81/Android/maticehGuru/";
+//        public static final String BASE_URL = "http://192.168.1.25:8080/Android/maticehGuru/";
+        public static final String BASE_URL = "http://192.168.43.170:81/Android/maticehGuru/";
 
         public static final String URL_GET_PEMESAN_ID = BASE_URL + "selectPemesanId.php/";
         public static final String URL_ACC_PESANAN_BARU = BASE_URL + "acceptPesananBaru.php/";
