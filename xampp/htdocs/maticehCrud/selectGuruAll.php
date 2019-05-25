@@ -46,8 +46,7 @@
 	}
 	
 	//Menampilkan Array dalam Format JSON
-	// echo json_encode(array('result'=>$result));
-	var_dump ($r);
+	echo json_encode(array('result'=>$result));
 	
 	mysqli_close($con);
 ?>

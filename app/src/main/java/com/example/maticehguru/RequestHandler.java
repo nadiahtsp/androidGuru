@@ -88,6 +88,7 @@ public class RequestHandler {
                 sb.append(s+"\n");
             }
         }catch(Exception e){
+            return e.toString();
         }
         return sb.toString();
     }

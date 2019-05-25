@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/listPesananLL">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:id="@+id/namaPemesanTV"/>
+        android:id="@+id/namaPemesanTV"
+        android:text="nama pemesan"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/provinsiTV"/>
+        android:id="@+id/provinsiTV"
+        android:text="provinsi pemesan"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/kabupatenKotaTV"/>
+        android:id="@+id/kabupatenKotaTV"
+        android:text="kabupaten kota pemesan"/>
+
+
 
 </LinearLayout>

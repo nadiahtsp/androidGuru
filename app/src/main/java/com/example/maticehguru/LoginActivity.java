@@ -23,8 +23,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText pass;
     String emailStr,passStr;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 Log.d("s contains: ", s);
-                Toast.makeText(LoginActivity.this,s,Toast.LENGTH_LONG).show();
+//                Toast.makeText(LoginActivity.this,s,Toast.LENGTH_LONG).show();
                 loading.dismiss();
                 verify(s);
             }

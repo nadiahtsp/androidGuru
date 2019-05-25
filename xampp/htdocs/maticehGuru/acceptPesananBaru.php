@@ -16,9 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	//Mendapatkan Nilai Variable
 	$id = $_POST['id'];
+	$updated_at = date("Y-m-d H:i:s");
 
 	//Pembuatan Syntax SQL
-	$sql = "UPDATE pemesanan SET status = 1 WHERE id = '$id'";
+	$sql = "UPDATE pemesanan SET status = 1, updated_at = '$updated_at' WHERE id = '$id'";
 
 	//Import File Koneksi database
 	require_once('connection.php');
@@ -29,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (mysqli_query($con, $sql)) {
 			echo 'Pesanan diterima';
 		} else {
-			echo 'Pesanan Gagal, error';
+			echo 'Pesanan tidak dapat diterima, error';
 		}
 	} catch (Exception $e) {
 		echo 'Caught exception: ',  $e->getMessage(), "\n";
