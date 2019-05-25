@@ -90,37 +90,35 @@ public class GuruListPesananFragment extends Fragment {
     private void fetchPesanan(String JSON_STRING){
         Log.d(TAG, "fetchPesanan: called");
         JSONObject jsonObject = null;
+        String id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, mapel_name;
         try {
             jsonObject = new JSONObject(JSON_STRING);
-            JSONArray result = jsonObject.getJSONArray(Config.TAG_JSON_ARRAY);
+            JSONArray jsonArray = jsonObject.getJSONArray(Config.TAG_JSON_ARRAY);
+            for (int i = 0; i<jsonArray.length(); i++){
+                JSONObject j = jsonArray.getJSONObject(i);
 
-            for (int i = 0; i < result.length(); i++) {
-                //Mengubah JSON menjadi bentuk objek
-                JSONObject c = result.getJSONObject(i);
+                id = j.getString(Config.KEY_PESANAN_ID);
+                id_guru = j.getString(Config.KEY_PESANAN_ID_GURU);
+                id_pemesan = j.getString(Config.KEY_PESANAN_ID_PEMESAN);
+                id_mapel = j.getString(Config.KEY_PESANAN_ID_MAPEL);
+                nama_murid = j.getString(Config.KEY_PESANAN_NAMA_MURID);
+                kelas = j.getString(Config.KEY_PESANAN_KELAS);
+                tgl_pertemuan_pertama = j.getString(Config.KEY_PESANAN_TGL_PERTEMUAN_PERTAMA);
+                status = j.getString(Config.KEY_PESANAN_STATUS);
+                created_at = j.getString(Config.KEY_PESANAN_CREATED_AT);
+                updated_at = j.getString(Config.KEY_PESANAN_UPDATED_AT);
+                guru_name = j.getString(Config.KEY_PESANAN_GURU_NAME);
+                pemesan_name = j.getString(Config.KEY_PESANAN_PEMESAN_NAME);
+                pemesan_provinsi = j.getString(Config.KEY_PESANAN_PEMESAN_PROVINSI);
+                pemesan_kabupaten_kota = j.getString(Config.KEY_PESANAN_PEMESAN_KABUPATEN_KOTA);
+                pemesan_alamat = j.getString(Config.KEY_PESANAN_PEMESAN_ALAMAT);
+                mapel_name = j.getString(Config.KEY_PESANAN_MAPEL_NAME);
 
-                String id, id_guru, id_pemesan, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat;
-
-                //Memasukkan semua yang ada di JSON Object ke guruModels
-                id = c.getString(Config.KEY_PESANAN_ID);
-                id_guru = c.getString(Config.KEY_PESANAN_ID_GURU);
-                id_pemesan = c.getString(Config.KEY_PESANAN_ID_PEMESAN);
-                status = c.getString(Config.KEY_PESANAN_STATUS);
-                created_at = c.getString(Config.KEY_PESANAN_CREATED_AT);
-                updated_at = c.getString(Config.KEY_PESANAN_UPDATED_AT);
-                guru_name = c.getString(Config.KEY_PESANAN_GURU_NAME);
-                pemesan_name = c.getString(Config.KEY_PESANAN_PEMESAN_NAME);
-                pemesan_provinsi = c.getString(Config.KEY_PESANAN_PEMESAN_PROVINSI);
-                pemesan_kabupaten_kota = c.getString(Config.KEY_PESANAN_PEMESAN_KABUPATEN_KOTA);
-                pemesan_alamat = c.getString(Config.KEY_PESANAN_PEMESAN_ALAMAT);
-
-                PesananModel pesananModel = new PesananModel(id, id_guru, id_pemesan, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat);
+                PesananModel pesananModel = new PesananModel(id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, mapel_name);
                 pesananModels.add(pesananModel);
-                Log.d(TAG, "fetchPesanan: id_pemesan: "+pesananModel.getId_pemesan());
             }
 
-            Log.d("pesananModels.size : ", Integer.toString(this.pesananModels.size()));
-
-        } catch (JSONException e) {
+        }catch (JSONException e){
             e.printStackTrace();
         }
         initRecyclerView();

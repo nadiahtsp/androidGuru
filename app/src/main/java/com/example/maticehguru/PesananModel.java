@@ -4,12 +4,19 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class PesananModel implements Parcelable {
-    private String id, id_guru, id_pemesan, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat;
+    private String id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, nama_mapel;
 
-    public PesananModel(String id, String id_guru, String id_pemesan, String status, String created_at, String updated_at, String guru_name, String pemesan_name, String pemesan_provinsi, String pemesan_kabupaten_kota, String pemesan_alamat) {
+    public PesananModel() {
+    }
+
+    public PesananModel(String id, String id_guru, String id_pemesan, String id_mapel, String nama_murid, String kelas, String tgl_pertemuan_pertama, String status, String created_at, String updated_at, String guru_name, String pemesan_name, String pemesan_provinsi, String pemesan_kabupaten_kota, String pemesan_alamat, String nama_mapel) {
         this.id = id;
         this.id_guru = id_guru;
         this.id_pemesan = id_pemesan;
+        this.id_mapel = id_mapel;
+        this.nama_murid = nama_murid;
+        this.kelas = kelas;
+        this.tgl_pertemuan_pertama = tgl_pertemuan_pertama;
         this.status = status;
         this.created_at = created_at;
         this.updated_at = updated_at;
@@ -18,6 +25,7 @@ public class PesananModel implements Parcelable {
         this.pemesan_provinsi = pemesan_provinsi;
         this.pemesan_kabupaten_kota = pemesan_kabupaten_kota;
         this.pemesan_alamat = pemesan_alamat;
+        this.nama_mapel = nama_mapel;
     }
 
     public String getId() {
@@ -42,6 +50,38 @@ public class PesananModel implements Parcelable {
 
     public void setId_pemesan(String id_pemesan) {
         this.id_pemesan = id_pemesan;
+    }
+
+    public String getId_mapel() {
+        return id_mapel;
+    }
+
+    public void setId_mapel(String id_mapel) {
+        this.id_mapel = id_mapel;
+    }
+
+    public String getNama_murid() {
+        return nama_murid;
+    }
+
+    public void setNama_murid(String nama_murid) {
+        this.nama_murid = nama_murid;
+    }
+
+    public String getKelas() {
+        return kelas;
+    }
+
+    public void setKelas(String kelas) {
+        this.kelas = kelas;
+    }
+
+    public String getTgl_pertemuan_pertama() {
+        return tgl_pertemuan_pertama;
+    }
+
+    public void setTgl_pertemuan_pertama(String tgl_pertemuan_pertama) {
+        this.tgl_pertemuan_pertama = tgl_pertemuan_pertama;
     }
 
     public String getStatus() {
@@ -108,6 +148,14 @@ public class PesananModel implements Parcelable {
         this.pemesan_alamat = pemesan_alamat;
     }
 
+    public String getNama_mapel() {
+        return nama_mapel;
+    }
+
+    public void setNama_mapel(String nama_mapel) {
+        this.nama_mapel = nama_mapel;
+    }
+
     public static Creator<PesananModel> getCREATOR() {
         return CREATOR;
     }
@@ -116,6 +164,10 @@ public class PesananModel implements Parcelable {
         id = in.readString();
         id_guru = in.readString();
         id_pemesan = in.readString();
+        id_mapel = in.readString();
+        nama_murid = in.readString();
+        kelas = in.readString();
+        tgl_pertemuan_pertama = in.readString();
         status = in.readString();
         created_at = in.readString();
         updated_at = in.readString();
@@ -124,6 +176,7 @@ public class PesananModel implements Parcelable {
         pemesan_provinsi = in.readString();
         pemesan_kabupaten_kota = in.readString();
         pemesan_alamat = in.readString();
+        nama_mapel = in.readString();
     }
 
     public static final Creator<PesananModel> CREATOR = new Creator<PesananModel>() {
@@ -148,6 +201,10 @@ public class PesananModel implements Parcelable {
         parcel.writeString(id);
         parcel.writeString(id_guru);
         parcel.writeString(id_pemesan);
+        parcel.writeString(id_mapel);
+        parcel.writeString(nama_murid);
+        parcel.writeString(kelas);
+        parcel.writeString(tgl_pertemuan_pertama);
         parcel.writeString(status);
         parcel.writeString(created_at);
         parcel.writeString(updated_at);
@@ -156,5 +213,6 @@ public class PesananModel implements Parcelable {
         parcel.writeString(pemesan_provinsi);
         parcel.writeString(pemesan_kabupaten_kota);
         parcel.writeString(pemesan_alamat);
+        parcel.writeString(nama_mapel);
     }
 }

@@ -87,7 +87,6 @@ public class GuruScanFragment extends Fragment {
         Log.d(TAG, "addAbsen: called");
 
         class AddAbsen extends AsyncTask<Void, Void, String>{
-            String id_guru = currentUser.getId();
 
             ProgressDialog progressDialog;
 
@@ -110,7 +109,7 @@ public class GuruScanFragment extends Fragment {
                 String resultStr = "";
                 try {
                     JSONObject jsonObject = new JSONObject(jsonStr);
-                    resultStr = jsonObject.getString("id_pemesan");
+                    resultStr = jsonObject.getString("id_pemesanan");
 
                 }catch (JSONException e){
                     e.printStackTrace();
@@ -119,11 +118,10 @@ public class GuruScanFragment extends Fragment {
                 RequestHandler requestHandler = new RequestHandler();
 
                 HashMap<String, String> params = new HashMap<>();
-                params.put("id_pemesan", resultStr);
-                params.put("id_guru", id_guru);
+                params.put("id_pemesanan", resultStr);
+                params.put("id_guru", currentUser.getId());
 
-                Log.d(TAG, "doInBackground: id_pemesan = "+resultStr);
-                Log.d(TAG, "doInBackground: id_guru = "+id_guru);
+                Log.d(TAG, "doInBackground: id_pemesanan = "+resultStr);
 
                 String s = requestHandler.sendPostRequest(Config.URL_ADD_ABSEN_BARU, params);
                 return s;

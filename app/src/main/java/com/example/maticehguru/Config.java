@@ -7,7 +7,8 @@ public class Config {
         //dimana File PHP tersebut berada
         //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
-        public static final String BASE_URL = "http://192.168.1.25:8080/Android/maticehGuru/";
+//        public static final String BASE_URL = "http://192.168.1.25:8080/Android/maticehGuru/";
+        public static final String BASE_URL = "http://192.168.100.15:8080/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://192.168.100.9:81/Android/maticehGuru/";
 
         public static final String URL_GET_PEMESAN_ID = BASE_URL + "selectPemesanId.php/";
@@ -39,9 +40,19 @@ public class Config {
         public static final String KEY_USER_DIREKTORI_CV = "direktori_cv";
         public static final String KEY_USER_INSTITUSI = "institusi";
 
+        public static final String KEY_BAHAN_AJAR_ID = "id";
+        public static final String KEY_BAHAN_AJAR_ID_GURU = "id_guru";
+        public static final String KEY_BAHAN_AJAR_ID_MAPEL = "id_mapel";
+        public static final String KEY_BAHAN_AJAR_NAMA_MAPEL = "nama_mapel";
+        public static final String KEY_BAHAN_AJAR_JENJANG_ = "jenjang";
+
         public static final String KEY_PESANAN_ID = "id";
         public static final String KEY_PESANAN_ID_GURU = "id_guru";
         public static final String KEY_PESANAN_ID_PEMESAN = "id_pemesan";
+        public static final String KEY_PESANAN_ID_MAPEL = "id_mapel";
+        public static final String KEY_PESANAN_NAMA_MURID = "nama_murid";
+        public static final String KEY_PESANAN_KELAS = "kelas";
+        public static final String KEY_PESANAN_TGL_PERTEMUAN_PERTAMA = "tgl_pertemuan_pertama";
         public static final String KEY_PESANAN_STATUS = "status";
         public static final String KEY_PESANAN_CREATED_AT = "created_at";
         public static final String KEY_PESANAN_UPDATED_AT = "updated_at";
@@ -50,6 +61,7 @@ public class Config {
         public static final String KEY_PESANAN_PEMESAN_PROVINSI = "pemesan_provinsi";
         public static final String KEY_PESANAN_PEMESAN_KABUPATEN_KOTA = "pemesan_kabupaten_kota";
         public static final String KEY_PESANAN_PEMESAN_ALAMAT = "pemesan_alamat";
+        public static final String KEY_PESANAN_MAPEL_NAME = "mapel_name";
         //JSON Tags
         public static final String TAG_JSON_ARRAY = "result";
 }

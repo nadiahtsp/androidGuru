@@ -1,6 +1,7 @@
 <?php
 
-    $id_guru = $_POST['id_guru'];
+    $id_pemesan = $_POST['id_pemesan'];
+
     // $id_guru = 36;
     //Import File Koneksi Database
 	require_once('connection.php');
@@ -19,10 +20,10 @@
                 (SELECT * FROM users WHERE role = 2) AS tguru,
                 mata_pelajaran
                 WHERE pemesanan.id_guru = tguru.id
-                AND pemesanan.id_pemesan = tpemesan.id
                 AND pemesanan.id_mapel = mata_pelajaran.id 
-                AND pemesanan.id_guru = '$id_guru'
-                AND pemesanan.status = 0";
+                AND pemesanan.id_pemesan = tpemesan.id
+                AND pemesanan.id_pemesan = '$id_pemesan'
+                AND pemesanan.status = 1";
         
         //Mendapatkan Hasil
         $r = mysqli_query($con,$sql);
