@@ -19,7 +19,7 @@
 		//Mendapatkan Nilai Variable
 		$name = $_POST['name'];
         $email = $_POST['email'];
-		$password = $_POST['password'];
+		$password = md5($_POST['password']);
 		$alamat = $_POST['alamat'];
 		$provinsi = $_POST['provinsi'];
 		$kabupatenKota = $_POST['kabupatenKota'];

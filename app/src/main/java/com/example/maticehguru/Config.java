@@ -7,9 +7,10 @@ public class Config {
         //dimana File PHP tersebut berada
         //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
-//        public static final String BASE_URL = "http://192.168.1.25:8080/Android/maticehGuru/";
-        public static final String BASE_URL = "http://192.168.100.15:8080/Android/maticehGuru/";
-//        public static final String BASE_URL = "http://192.168.100.9:81/Android/maticehGuru/";
+        public static final String BASE_URL = "http://192.168.1.22:8080/maticeh-pk/Android/maticehGuru/";
+//        public static final String BASE_URL = "http://192.168.100.15:8080/maticeh-pk/Android/maticehGuru/";
+//        public static final String BASE_URL = "http://192.168.100.9:81/maticeh-pk/Android/maticehGuru/";
+//        public static final String BASE_URL = "http://192.168.43.251:8080/maticeh-pk/Android/maticehGuru/";
 
         public static final String URL_GET_PEMESAN_ID = BASE_URL + "selectPemesanId.php/";
         public static final String URL_ACC_PESANAN_BARU = BASE_URL + "acceptPesananBaru.php/";
@@ -62,6 +63,7 @@ public class Config {
         public static final String KEY_PESANAN_PEMESAN_KABUPATEN_KOTA = "pemesan_kabupaten_kota";
         public static final String KEY_PESANAN_PEMESAN_ALAMAT = "pemesan_alamat";
         public static final String KEY_PESANAN_MAPEL_NAME = "mapel_name";
+
         //JSON Tags
         public static final String TAG_JSON_ARRAY = "result";
 }

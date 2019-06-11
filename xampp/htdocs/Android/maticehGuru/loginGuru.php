@@ -3,7 +3,7 @@ require_once('connection.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
 
     $sql = "SELECT users.*, guru.institusi, guru.direktori_cv FROM `users` JOIN guru ON users.id = guru.id_guru WHERE users.email = '$email' and users.password = '$password';";
 
