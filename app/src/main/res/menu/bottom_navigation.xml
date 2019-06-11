@@ -17,8 +17,13 @@
         android:title="Scan"
         />
     <item
+        android:id="@+id/guru_bottomnav_notification"
+        android:icon="@drawable/ic_notifications_active_black_24dp"
+        android:title="Notifikasi"
+        />
+    <item
         android:id="@+id/guru_bottomnav_listPesanan"
-        android:icon="@drawable/ic_settings_overscan_black_24dp"
+        android:icon="@drawable/ic_playlist_add_black_24dp"
         android:title="Pesanan"
         />
 </menu>
