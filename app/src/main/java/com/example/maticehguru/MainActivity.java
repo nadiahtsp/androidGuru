@@ -1,6 +1,5 @@
 package com.example.maticehguru;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,7 +8,12 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Button;
+
+import com.example.maticehguru.Fragments.GuruFragmentHome;
+import com.example.maticehguru.Fragments.GuruHistoryFragment;
+import com.example.maticehguru.Fragments.GuruListPesananFragment;
+import com.example.maticehguru.Fragments.GuruNotifikasiFragment;
+import com.example.maticehguru.Fragments.GuruScanFragment;
 
 public class MainActivity extends AppCompatActivity {
 

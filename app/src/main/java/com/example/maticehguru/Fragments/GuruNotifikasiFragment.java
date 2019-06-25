@@ -1,4 +1,4 @@
-package com.example.maticehguru;
+package com.example.maticehguru.Fragments;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.maticehguru.R;
 
 public class GuruNotifikasiFragment extends Fragment {
     public GuruNotifikasiFragment(){
