@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMain"
+    android:padding="20dp"
+    tools:context=".splashActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            />
+        <TextView
+            android:id="@+id/maticeh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maticeh"
+            android:textSize="30sp"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorTitleWhite"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bawa guru ke rumahmu"
+            android:textSize="30sp"
+            android:layout_below="@+id/maticeh"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorTitleWhite"/>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
