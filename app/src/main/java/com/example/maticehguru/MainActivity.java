@@ -8,6 +8,9 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+<<<<<<< HEAD
+=======
+>>>>>>> de72e755836daa406799fb14b88d58c17241ceff
 
 public class MainActivity extends AppCompatActivity {
 

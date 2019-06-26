@@ -1,4 +1,4 @@
-package com.example.maticehguru.Fragments;
+package com.example.maticehguru;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
