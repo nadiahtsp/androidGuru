@@ -1,4 +1,4 @@
-package com.example.maticehguru;
+package com.example.maticehguru.Fragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -15,10 +15,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.maticehguru.Config;
+import com.example.maticehguru.R;
+import com.example.maticehguru.RequestHandler;
+import com.example.maticehguru.Models.UserModel;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 

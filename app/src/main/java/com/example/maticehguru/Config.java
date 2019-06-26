@@ -63,6 +63,7 @@ public class Config {
         public static final String KEY_PESANAN_PEMESAN_KABUPATEN_KOTA = "pemesan_kabupaten_kota";
         public static final String KEY_PESANAN_PEMESAN_ALAMAT = "pemesan_alamat";
         public static final String KEY_PESANAN_MAPEL_NAME = "mapel_name";
+        public static final String KEY_PESANAN_JENJANG_NAME = "nama_jenjang";
 
         //JSON Tags
         public static final String TAG_JSON_ARRAY = "result";
