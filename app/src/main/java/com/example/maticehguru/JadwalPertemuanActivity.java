@@ -61,6 +61,8 @@ public class JadwalPertemuanActivity extends AppCompatActivity {
                 HashMap<String, String> params = new HashMap<>();
 
                 params.put(Config.KEY_PESANAN_ID_GURU, currentUser.getId());
+                params.put(Config.KEY_PESANAN_STATUS, "1");
+
                 String s = rh.sendPostRequest(Config.URL_GET_ALL_PESANAN, params);
                 return s;
             }

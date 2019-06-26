@@ -84,6 +84,7 @@ public class GuruListPesananFragment extends Fragment {
             protected String doInBackground(Void... v) {
                 HashMap<String,String> params = new HashMap<>();
                 params.put(Config.KEY_PESANAN_ID_GURU, currentUser.getId());
+                params.put(Config.KEY_PESANAN_STATUS, "0");
 
                 RequestHandler rh = new RequestHandler();
                 String s = rh.sendPostRequest(Config.URL_GET_ALL_PESANAN, params);

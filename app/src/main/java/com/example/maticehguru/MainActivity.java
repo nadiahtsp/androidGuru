@@ -77,13 +77,13 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new GuruListPesananFragment();
                             break;
                         case R.id.guru_bottomnav_scan:
-//                            selectedFragment = new GuruScanFragment();
-                            selectedFragment = new GuruHistoryFragment();
+                            selectedFragment = new GuruFragmentHome();
+//                            selectedFragment = new GuruHistoryFragment();
                             startScanner();
                             break;
-                        case R.id.guru_bottomnav_history:
-                            selectedFragment = new GuruHistoryFragment();
-                            break;
+//                        case R.id.guru_bottomnav_history:
+//                            selectedFragment = new GuruHistoryFragment();
+//                            break;
                         case R.id.guru_bottomnav_profile:
                             selectedFragment = new ProfileFragment();
                             break;

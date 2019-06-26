@@ -45,9 +45,9 @@ public class GuruFragmentHome extends Fragment {
         btnJadwal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(), );
-//                intent.putExtra("currentUser", currentUser);
-//                startActivity(intent);
+                Intent intent = new Intent(getActivity(), JadwalPertemuanActivity.class);
+                intent.putExtra("currentUser", currentUser);
+                startActivity(intent);
             }
         });
 

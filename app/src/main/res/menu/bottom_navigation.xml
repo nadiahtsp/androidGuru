@@ -15,10 +15,10 @@
         android:icon="@drawable/ic_settings_overscan_black_24dp"
         android:title="Scan"
         />
-    <item
-        android:id="@+id/guru_bottomnav_history"
-        android:icon="@drawable/ic_history_black_24dp"
-        android:title="History"
+    <!--<item-->
+        <!--android:id="@+id/guru_bottomnav_history"-->
+        <!--android:icon="@drawable/ic_history_black_24dp"-->
+        <!--android:title="History"-->
         />
     <item
         android:id="@+id/guru_bottomnav_notification"
