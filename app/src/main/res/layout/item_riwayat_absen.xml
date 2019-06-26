@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="173dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemRiwayat"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/colorTitleWhite"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:contentPadding="4dp"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/namaMurid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAMA"
+                    android:textSize="24dp"/>
+
+                <TextView
+                    android:id="@+id/mapel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MATA PELAJARAN"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/jenjang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JENJANG"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/barcode_01"
+                    android:layout_marginLeft="40dp"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tanggalRiwayat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TANGGAL"
+                android:layout_marginRight="30dp"
+                android:textSize="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</android.support.v7.widget.CardView>
