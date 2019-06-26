@@ -6,9 +6,19 @@
         android:title="Home"
         />
     <item
+        android:id="@+id/guru_bottomnav_pemesanan"
+        android:icon="@drawable/ic_playlist_add_black_24dp"
+        android:title="Pesanan"
+        />
+    <item
         android:id="@+id/guru_bottomnav_scan"
         android:icon="@drawable/ic_settings_overscan_black_24dp"
         android:title="Scan"
+        />
+    <item
+        android:id="@+id/guru_bottomnav_history"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="History"
         />
     <item
         android:id="@+id/guru_bottomnav_notification"

@@ -13,30 +13,30 @@ tools:context=".GuruScanFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<Button-->
-        <!--android:id="@+id/scan_btn"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Scan Absen"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--/>-->
+    <Button
+        android:id="@+id/scan_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan Absen"
+        android:layout_centerInParent="true"
+        />
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        app:itemBackground="@color/colorTitleWhite"
-        app:menu="@menu/bottom_navigation"
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/bottom_nav"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--app:itemBackground="@color/colorTitleWhite"-->
+        <!--app:menu="@menu/bottom_navigation"-->
 
-        ></android.support.design.widget.BottomNavigationView>
+        <!--&gt;</android.support.design.widget.BottomNavigationView>-->
     <!--app:itemIconTint="@color/bottom_nav_color"-->
 
-    <FrameLayout
-        android:id="@+id/main_frame"
-        android:layout_width="match_parent"
-        android:layout_height="658dp"
-        android:layout_above="@id/bottom_nav"></FrameLayout>
+    <!--<FrameLayout-->
+        <!--android:id="@+id/main_frame"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="658dp"-->
+        <!--android:layout_above="@id/bottom_nav"></FrameLayout>-->
 
 </RelativeLayout>
 </FrameLayout>

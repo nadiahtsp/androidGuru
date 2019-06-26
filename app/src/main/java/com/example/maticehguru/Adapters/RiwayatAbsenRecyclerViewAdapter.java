@@ -26,10 +26,11 @@ public class RiwayatAbsenRecyclerViewAdapter extends RecyclerView.Adapter<Riwaya
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        Log.d(TAG, "onCreateViewHolder: called");
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.belom ada, parent, false);
-        RiwayatAbsenRecyclerViewAdapter.ViewHolder holder = new RiwayatAbsenRecyclerViewAdapter().ViewHolder(view);
-        return holder;
+//        Log.d(TAG, "onCreateViewHolder: called");
+//        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+//        RiwayatAbsenRecyclerViewAdapter.ViewHolder holder = new RiwayatAbsenRecyclerViewAdapter().ViewHolder(view);
+//        return holder;
+        return null;
     }
 
     @Override

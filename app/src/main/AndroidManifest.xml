@@ -15,8 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DaftarMurid"></activity>
-        <activity android:name=".PendapatanFragment" />
+        <activity android:name=".JadwalPertemuanActivity"></activity>
+        <activity android:name=".DaftarMurid" />
+        <activity android:name=".PendapatanActivity" />
         <activity android:name=".splashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
