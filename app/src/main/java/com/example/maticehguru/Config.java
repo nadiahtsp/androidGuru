@@ -23,8 +23,10 @@ public class Config {
         public static final String URL_GET_ALL_ABSEN = BASE_URL + "fetchAllAbsen.php";
 //        public static final String URL_UPDATE_USER = BASE_URL + "update.php/";
 //        public static final String URL_DELETE_USER = BASE_URL + "delete.php?id=";
+        public static final String URL_GET_NOTIFIKASI = BASE_URL + "fetchAllNotifikasi.php";
 
-        //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
+
+    //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
         public static final String KEY_USER_ID = "id";
         public static final String KEY_USER_NAME = "name";
         public static final String KEY_USER_EMAIL = "email";
@@ -76,6 +78,13 @@ public class Config {
         public static final String KEY_ABSEN_NAMA_MURID = "nama_murid";
         public static final String KEY_ABSEN_NAMA_MAPEL = "nama_mapel";
         public static final String KEY_ABSEN_JENJANG = "jenjang";
+        public static final String KEY_NOTIFIKASI_ID = "id";
+        public static final String KEY_NOTIFIKASI_PESAN = "pesan";
+        public static final String KEY_NOTIFIKASI_STATUS = "status";
+        public static final String KEY_NOTIFIKASI_TGL = "tgl_notifikasi";
+        public static final String KEY_NOTIFIKASI_ID_USER = "id_user";
+
+
 
         //JSON Tags
         public static final String TAG_JSON_ARRAY = "result";
