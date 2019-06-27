@@ -6,10 +6,10 @@ public class Config {
         //Pada tutorial Kali ini, karena kita membuat localhost maka alamatnya tertuju ke IP komputer
         //dimana File PHP tersebut berada
         //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
-
-        public static final String BASE_URL = "http://192.168.1.20:8080/maticeh-pk/Android/maticehGuru/";
+        public static final String BASE_URL = "http://maticeh.invicit.com/android/maticehGuru/";
+//        public static final String BASE_URL = "http://192.168.1.20:8080/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://10.107.213.114/maticeh-pk/Android/maticehGuru/";
-//        public static final String BASE_URL = "http://192.168.100.9:81/maticeh-pk/Android/maticehGuru/";
+//        public static final String BASE_URL = "http://192.168.100.15:8080/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://192.168.43.251:8080/maticeh-pk/Android/maticehGuru/";
 
         public static final String URL_GET_PEMESAN_ID = BASE_URL + "selectPemesanId.php/";
@@ -20,6 +20,7 @@ public class Config {
         public static final String URL_GET_LOGIN = BASE_URL + "loginGuru.php";
         public static final String URL_GET_ALL_PESANAN = BASE_URL + "selectAllPesanan.php";
         public static final String URL_ADD_ABSEN_BARU = BASE_URL + "addAbsenBaru.php";
+        public static final String URL_GET_ALL_ABSEN = BASE_URL + "fetchAllAbsen.php";
 //        public static final String URL_UPDATE_USER = BASE_URL + "update.php/";
 //        public static final String URL_DELETE_USER = BASE_URL + "delete.php?id=";
 
@@ -64,6 +65,17 @@ public class Config {
         public static final String KEY_PESANAN_PEMESAN_ALAMAT = "pemesan_alamat";
         public static final String KEY_PESANAN_MAPEL_NAME = "mapel_name";
         public static final String KEY_PESANAN_JENJANG_NAME = "nama_jenjang";
+
+        public static final String KEY_ABSEN_ID = "id";
+        public static final String KEY_ABSEN_ID_PEMESANAN = "id_pemesanan";
+        public static final String KEY_ABSEN_STATUS = "status";
+        public static final String KEY_ABSEN_CREATED_AT = "created_at";
+        public static final String KEY_ABSEN_UPDATED_AT = "updated_at";
+        public static final String KEY_ABSEN_NAMA_PEMESAN = "nama_pemesan";
+        public static final String KEY_ABSEN_NAMA_GURU = "nama_guru";
+        public static final String KEY_ABSEN_NAMA_MURID = "nama_murid";
+        public static final String KEY_ABSEN_NAMA_MAPEL = "nama_mapel";
+        public static final String KEY_ABSEN_JENJANG = "jenjang";
 
         //JSON Tags
         public static final String TAG_JSON_ARRAY = "result";

@@ -1,5 +1,6 @@
 package com.example.maticehguru;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -46,16 +47,20 @@ public class DaftarMurid extends AppCompatActivity {
 
     private void getJson(){
         Log.d(TAG, "getJson: called");
+
         class GetJson extends AsyncTask<Void, Void, String>{
+            ProgressDialog loading;
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
+                loading = ProgressDialog.show(DaftarMurid.this, "Fetching...", "Please wait...", false, false);
             }
 
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 Log.d(TAG, "onPostExecute: s = "+s);
+                loading.dismiss();
                 fetchDaftarMurid(s);
             }
 
