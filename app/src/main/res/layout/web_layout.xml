@@ -12,20 +12,10 @@
         android:layout_margin="10dip"
         android:layout_weight="0.82" >
 
-        <TextView
-            android:id="@+id/Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:gravity="center"
-            android:text="Buy your Tickets:" />
-
         <WebView
-            android:id="@+id/ticketline"
+            android:id="@+id/bantuan"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@id/Title"
             android:layout_marginTop="5dip" />
     </RelativeLayout>
 
