@@ -14,6 +14,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.maticehguru.Config;
+import com.example.maticehguru.Models.PesananModel;
+import com.example.maticehguru.R;
+import com.example.maticehguru.Adapters.PesananRecyclerViewAdapter;
+import com.example.maticehguru.RequestHandler;
+import com.example.maticehguru.Models.UserModel;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,8 +47,8 @@ public class GuruListPesananFragment extends Fragment {
 
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: called");
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(this.pesananModels, getActivity(), this.currentUser);
-        listPesananRV.setAdapter(recyclerViewAdapter);
+        PesananRecyclerViewAdapter pesananRecyclerViewAdapter = new PesananRecyclerViewAdapter(this.pesananModels, getActivity(), this.currentUser);
+        listPesananRV.setAdapter(pesananRecyclerViewAdapter);
         listPesananRV.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
@@ -69,7 +76,7 @@ public class GuruListPesananFragment extends Fragment {
                 super.onPostExecute(s);
                 loading.dismiss();
                 JSON_STRING = s;
-                Log.d("JSON in fetchPesanan", JSON_STRING);
+                Log.d(TAG, "s = "+JSON_STRING);
                 fetchPesanan(JSON_STRING);
             }
 
@@ -77,6 +84,7 @@ public class GuruListPesananFragment extends Fragment {
             protected String doInBackground(Void... v) {
                 HashMap<String,String> params = new HashMap<>();
                 params.put(Config.KEY_PESANAN_ID_GURU, currentUser.getId());
+                params.put(Config.KEY_PESANAN_STATUS, "0");
 
                 RequestHandler rh = new RequestHandler();
                 String s = rh.sendPostRequest(Config.URL_GET_ALL_PESANAN, params);
@@ -90,12 +98,15 @@ public class GuruListPesananFragment extends Fragment {
     private void fetchPesanan(String JSON_STRING){
         Log.d(TAG, "fetchPesanan: called");
         JSONObject jsonObject = null;
-        String id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, mapel_name;
+
         try {
             jsonObject = new JSONObject(JSON_STRING);
             JSONArray jsonArray = jsonObject.getJSONArray(Config.TAG_JSON_ARRAY);
             for (int i = 0; i<jsonArray.length(); i++){
                 JSONObject j = jsonArray.getJSONObject(i);
+
+                String id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, mapel_name;
+                String nama_jenjang;
 
                 id = j.getString(Config.KEY_PESANAN_ID);
                 id_guru = j.getString(Config.KEY_PESANAN_ID_GURU);
@@ -113,8 +124,11 @@ public class GuruListPesananFragment extends Fragment {
                 pemesan_kabupaten_kota = j.getString(Config.KEY_PESANAN_PEMESAN_KABUPATEN_KOTA);
                 pemesan_alamat = j.getString(Config.KEY_PESANAN_PEMESAN_ALAMAT);
                 mapel_name = j.getString(Config.KEY_PESANAN_MAPEL_NAME);
+                nama_jenjang = j.getString(Config.KEY_PESANAN_JENJANG_NAME);
 
                 PesananModel pesananModel = new PesananModel(id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, mapel_name);
+                pesananModel.setNama_jenjang(nama_jenjang);
+
                 pesananModels.add(pesananModel);
             }
 

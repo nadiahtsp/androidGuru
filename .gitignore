@@ -50,3 +50,7 @@ local.properties
 .idea/workspace.xml
 app/app.iml
 app/src/main/java/com/example/maticehguru/MainActivity.java
+.gradle/5.1.1/executionHistory/executionHistory.lock
+.gradle/5.1.1/fileHashes/fileHashes.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.idea/caches/gradle_models.ser

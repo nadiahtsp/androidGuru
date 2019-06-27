@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import com.example.maticehguru.R;
 
 public class GuruNotifikasiFragment extends Fragment {
     ListView notifikasiLV;

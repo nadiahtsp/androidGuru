@@ -1,4 +1,4 @@
-package com.example.maticehguru;
+package com.example.maticehguru.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,10 +11,15 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.maticehguru.DetailPesanan;
+import com.example.maticehguru.Models.PesananModel;
+import com.example.maticehguru.Models.UserModel;
+import com.example.maticehguru.R;
+
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
-    private static final String TAG = "RecyclerViewAdapter";
+public class PesananRecyclerViewAdapter extends RecyclerView.Adapter<PesananRecyclerViewAdapter.ViewHolder>{
+    private static final String TAG = "PesananRecyclerViewAdap";
 
 //    id, name, email, password, remember_token, alamat, status, role, no_hp, jenis_kelamin, created_at, updated_at;
 
@@ -22,7 +27,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private UserModel currentUser;
     private Context mContext;
 
-    public RecyclerViewAdapter(ArrayList<PesananModel> pesananModels, Context mContext, UserModel currentUser) {
+    public PesananRecyclerViewAdapter(ArrayList<PesananModel> pesananModels, Context mContext, UserModel currentUser) {
         this.currentUser = currentUser;
         this.pesananModels = pesananModels;
         this.mContext = mContext;
@@ -43,7 +48,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //        viewHolder.institusiTV.setText(mTeacherInstitution.get(position));
         viewHolder.namaPemesanTV.setText(pesananModels.get(position).getPemesan_name());
         viewHolder.kabupatenKotaTV.setText(pesananModels.get(position).getPemesan_kabupaten_kota());
-        viewHolder.provinsiTV.setText(pesananModels.get(position).getPemesan_provinsi());
+        viewHolder.provinsiTV.setText(pesananModels.get(position).getPemesan_kabupaten_kota());
 
         viewHolder.listPesananLL.setOnClickListener(new View.OnClickListener() {
             @Override

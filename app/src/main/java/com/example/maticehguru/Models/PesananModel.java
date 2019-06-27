@@ -1,10 +1,11 @@
-package com.example.maticehguru;
+package com.example.maticehguru.Models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class PesananModel implements Parcelable {
     private String id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, nama_mapel;
+    private String nama_jenjang = "";
 
     public PesananModel() {
     }
@@ -26,6 +27,14 @@ public class PesananModel implements Parcelable {
         this.pemesan_kabupaten_kota = pemesan_kabupaten_kota;
         this.pemesan_alamat = pemesan_alamat;
         this.nama_mapel = nama_mapel;
+    }
+
+    public String getNama_jenjang() {
+        return nama_jenjang;
+    }
+
+    public void setNama_jenjang(String nama_jenjang) {
+        this.nama_jenjang = nama_jenjang;
     }
 
     public String getId() {
@@ -177,6 +186,7 @@ public class PesananModel implements Parcelable {
         pemesan_kabupaten_kota = in.readString();
         pemesan_alamat = in.readString();
         nama_mapel = in.readString();
+        nama_jenjang = in.readString();
     }
 
     public static final Creator<PesananModel> CREATOR = new Creator<PesananModel>() {
@@ -214,5 +224,6 @@ public class PesananModel implements Parcelable {
         parcel.writeString(pemesan_kabupaten_kota);
         parcel.writeString(pemesan_alamat);
         parcel.writeString(nama_mapel);
+        parcel.writeString(nama_jenjang);
     }
 }

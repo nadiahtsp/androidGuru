@@ -1,4 +1,4 @@
-package com.example.maticehguru;
+package com.example.maticehguru.Models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
