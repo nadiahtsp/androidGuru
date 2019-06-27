@@ -17,6 +17,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".WebKontak"></activity>
         <activity android:name=".HistoryActivity" />
+        <activity android:name=".DetailDaftarMuridActivity"></activity>
+        <activity android:name=".DetailPesanan" />
+        <activity android:name=".Absensi" />
+        <activity android:name=".LoginActivity"/>
         <activity android:name=".JadwalPertemuanActivity" />
         <activity android:name=".DaftarMurid" />
         <activity android:name=".PendapatanActivity" />
@@ -28,9 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetailPesanan" />
-        <activity android:name=".Absensi" />
-        <activity android:name=".LoginActivity" />
         <activity android:name=".Web_bantuan" />
         <activity android:name=".MainActivity" />
     </application>
