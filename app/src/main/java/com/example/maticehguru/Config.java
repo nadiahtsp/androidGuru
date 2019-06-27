@@ -7,9 +7,9 @@ public class Config {
         //dimana File PHP tersebut berada
         //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
-        public static final String BASE_URL = "http://192.168.1.20:8080/maticeh-pk/Android/maticehGuru/";
+//        public static final String BASE_URL = "http://192.168.1.20:8080/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://10.107.213.114/maticeh-pk/Android/maticehGuru/";
-//        public static final String BASE_URL = "http://192.168.100.9:81/maticeh-pk/Android/maticehGuru/";
+        public static final String BASE_URL = "http://192.168.100.65/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://192.168.43.251:8080/maticeh-pk/Android/maticehGuru/";
 
         public static final String URL_GET_PEMESAN_ID = BASE_URL + "selectPemesanId.php/";
@@ -22,8 +22,10 @@ public class Config {
         public static final String URL_ADD_ABSEN_BARU = BASE_URL + "addAbsenBaru.php";
 //        public static final String URL_UPDATE_USER = BASE_URL + "update.php/";
 //        public static final String URL_DELETE_USER = BASE_URL + "delete.php?id=";
+        public static final String URL_GET_NOTIFIKASI = BASE_URL + "fetchAllNotifikasi.php";
 
-        //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
+
+    //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
         public static final String KEY_USER_ID = "id";
         public static final String KEY_USER_NAME = "name";
         public static final String KEY_USER_EMAIL = "email";
@@ -64,6 +66,14 @@ public class Config {
         public static final String KEY_PESANAN_PEMESAN_ALAMAT = "pemesan_alamat";
         public static final String KEY_PESANAN_MAPEL_NAME = "mapel_name";
         public static final String KEY_PESANAN_JENJANG_NAME = "nama_jenjang";
+
+        public static final String KEY_NOTIFIKASI_ID = "id";
+        public static final String KEY_NOTIFIKASI_PESAN = "pesan";
+        public static final String KEY_NOTIFIKASI_STATUS = "status";
+        public static final String KEY_NOTIFIKASI_TGL = "tgl_notifikasi";
+        public static final String KEY_NOTIFIKASI_ID_USER = "id_user";
+
+
 
         //JSON Tags
         public static final String TAG_JSON_ARRAY = "result";

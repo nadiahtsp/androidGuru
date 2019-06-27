@@ -19,17 +19,17 @@
         android:id="@+id/notifRL">
 
         <TextView
-            android:id="@+id/tv1"
+            android:id="@+id/tv_pesannotifikasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Selamat"
             android:textSize="20sp" />
         <TextView
-            android:id="@+id/tv2"
+            android:id="@+id/tv_tglnotifikasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tanggal"
-            android:layout_below="@id/tv1"
+            android:layout_below="@id/tv_pesannotifikasi"
             android:textSize="20sp" />
     </RelativeLayout>
 
