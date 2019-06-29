@@ -5,50 +5,107 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailPesanan"
+    android:padding="20dp"
+    android:background="@color/colorMain"
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Ini adalah detail guru"/>
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:text="KONFIRMASI PEMESANAN"
+        />
+    <View
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#fff"
+        android:visibility="gone"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layerlogin"
+    android:orientation="vertical"
+    android:padding="13dp"
+    android:layout_marginTop="20dp"
+    >
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama pemesan"
+        android:layout_marginTop="10dp"
+        android:text="Nama Murid : "
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000"
         android:id="@+id/namaPemesanTV"/>
+    <View
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorMain"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:id="@+id/alamatTV"
+        android:text="Alamat : "
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/provinsiTV"
-        android:text="Provinsi pemesan"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:id="@+id/kabupatenKotaTV"
+        android:textSize="20sp"
+        android:textColor="#000"
         android:text="Kabupaten Kota"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/alamatTV"
-        android:text="Alamat"
+        android:layout_marginTop="10dp"
+        android:id="@+id/provinsiTV"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:text="Provinsi pemesan"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/jadwalTV"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:text="Jadwal Pertemuan:"
         />
-
+</LinearLayout>
     <Button
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="accept"
+        android:background="@drawable/button_muda"
+        android:textColor="#fff"
+        android:text="Terima"
         android:id="@+id/btnAccept"/>
 
     <Button
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="decline"
+        android:background="@drawable/button_muda"
+        android:textColor="#fff"
+        android:text="tolak"
         android:id="@+id/btnDecline"/>
 
 </LinearLayout>

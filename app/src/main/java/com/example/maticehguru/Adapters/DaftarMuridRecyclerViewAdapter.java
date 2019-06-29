@@ -42,6 +42,7 @@ public class DaftarMuridRecyclerViewAdapter extends RecyclerView.Adapter<DaftarM
         viewHolder.namaTV.setText(pm.getNama_murid());
         viewHolder.bidangTV.setText(pm.getNama_mapel());
         viewHolder.jenjangTV.setText(pm.getNama_jenjang());
+        viewHolder.kontakMuridTV.setText("Nomor HP: "+pm.getKontak_murid());
 
         viewHolder.daftarMuridRL.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +60,7 @@ public class DaftarMuridRecyclerViewAdapter extends RecyclerView.Adapter<DaftarM
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView namaTV, bidangTV, jenjangTV;
+        TextView namaTV, bidangTV, jenjangTV, kontakMuridTV;
         RelativeLayout daftarMuridRL;
 
         public ViewHolder(@NonNull View itemView) {
@@ -67,6 +68,8 @@ public class DaftarMuridRecyclerViewAdapter extends RecyclerView.Adapter<DaftarM
             namaTV = itemView.findViewById(R.id.namaTV);
             bidangTV = itemView.findViewById(R.id.bidangTV);
             jenjangTV = itemView.findViewById(R.id.jenjangTV);
+            kontakMuridTV = itemView.findViewById(R.id.kontakMuridTV);
+
             daftarMuridRL = itemView.findViewById(R.id.daftarMuridRL);
         }
     }

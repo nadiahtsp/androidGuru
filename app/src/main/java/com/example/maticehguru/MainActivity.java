@@ -1,5 +1,6 @@
 package com.example.maticehguru;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -27,10 +28,13 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     UserModel currentUser;
 
+    public static Activity mainActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mainActivity = this;
 
         currentUser = getIntent().getParcelableExtra("currentUser");
 

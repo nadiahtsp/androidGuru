@@ -5,16 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailDaftarMuridActivity"
+    android:background="@color/colorMain"
+    android:padding="20dp"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Riwayat absen"/>
+        android:text="Riwayat absen"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="#fff"
+        />
 
     <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/daftarAbsenRV"></android.support.v7.widget.RecyclerView>
+        android:id="@+id/daftarAbsenRV">
+
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

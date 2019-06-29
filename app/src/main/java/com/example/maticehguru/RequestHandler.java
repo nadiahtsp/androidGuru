@@ -39,8 +39,8 @@ public class RequestHandler {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
             //Konfigurasi koneksi
-            conn.setReadTimeout(15000);
-            conn.setConnectTimeout(15000);
+            conn.setReadTimeout(20000);
+            conn.setConnectTimeout(20000);
             conn.setRequestMethod("POST");
             conn.setDoInput(true);
             conn.setDoOutput(true);

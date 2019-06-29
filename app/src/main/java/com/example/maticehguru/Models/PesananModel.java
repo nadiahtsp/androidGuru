@@ -5,7 +5,9 @@ import android.os.Parcelable;
 
 public class PesananModel implements Parcelable {
     private String id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, nama_mapel;
+    private String sesi = "", harga_jenjang = "",id_pembayaran="", total_pembayaran="";
     private String nama_jenjang = "";
+    private String kontak_murid = "", kontak_guru = "";
 
     public PesananModel() {
     }
@@ -27,6 +29,54 @@ public class PesananModel implements Parcelable {
         this.pemesan_kabupaten_kota = pemesan_kabupaten_kota;
         this.pemesan_alamat = pemesan_alamat;
         this.nama_mapel = nama_mapel;
+    }
+
+    public String getKontak_murid() {
+        return kontak_murid;
+    }
+
+    public void setKontak_murid(String kontak_murid) {
+        this.kontak_murid = kontak_murid;
+    }
+
+    public String getKontak_guru() {
+        return kontak_guru;
+    }
+
+    public void setKontak_guru(String kontak_guru) {
+        this.kontak_guru = kontak_guru;
+    }
+
+    public String getSesi() {
+        return sesi;
+    }
+
+    public String getTotal_pembayaran() {
+        return total_pembayaran;
+    }
+
+    public void setTotal_pembayaran(String total_pembayaran) {
+        this.total_pembayaran = total_pembayaran;
+    }
+
+    public void setSesi(String sesi) {
+        this.sesi = sesi;
+    }
+
+    public String getHarga_jenjang() {
+        return harga_jenjang;
+    }
+
+    public String getId_pembayaran() {
+        return id_pembayaran;
+    }
+
+    public void setId_pembayaran(String id_pembayaran) {
+        this.id_pembayaran = id_pembayaran;
+    }
+
+    public void setHarga_jenjang(String harga_jenjang) {
+        this.harga_jenjang = harga_jenjang;
     }
 
     public String getNama_jenjang() {
@@ -186,7 +236,13 @@ public class PesananModel implements Parcelable {
         pemesan_kabupaten_kota = in.readString();
         pemesan_alamat = in.readString();
         nama_mapel = in.readString();
+        sesi = in.readString();
+        harga_jenjang = in.readString();
+        id_pembayaran = in.readString();
+        total_pembayaran = in.readString();
         nama_jenjang = in.readString();
+        kontak_murid = in.readString();
+        kontak_guru = in.readString();
     }
 
     public static final Creator<PesananModel> CREATOR = new Creator<PesananModel>() {
@@ -224,6 +280,12 @@ public class PesananModel implements Parcelable {
         parcel.writeString(pemesan_kabupaten_kota);
         parcel.writeString(pemesan_alamat);
         parcel.writeString(nama_mapel);
+        parcel.writeString(sesi);
+        parcel.writeString(harga_jenjang);
+        parcel.writeString(id_pembayaran);
+        parcel.writeString(total_pembayaran);
         parcel.writeString(nama_jenjang);
+        parcel.writeString(kontak_guru);
+        parcel.writeString(kontak_murid);
     }
 }

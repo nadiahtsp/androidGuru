@@ -48,7 +48,7 @@ public class PesananRecyclerViewAdapter extends RecyclerView.Adapter<PesananRecy
 //        viewHolder.institusiTV.setText(mTeacherInstitution.get(position));
         viewHolder.namaPemesanTV.setText(pesananModels.get(position).getPemesan_name());
         viewHolder.kabupatenKotaTV.setText(pesananModels.get(position).getPemesan_kabupaten_kota());
-        viewHolder.provinsiTV.setText(pesananModels.get(position).getPemesan_kabupaten_kota());
+        viewHolder.provinsiTV.setText(pesananModels.get(position).getPemesan_provinsi());
 
         viewHolder.listPesananLL.setOnClickListener(new View.OnClickListener() {
             @Override

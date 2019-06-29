@@ -6,9 +6,10 @@ public class Config {
         //Pada tutorial Kali ini, karena kita membuat localhost maka alamatnya tertuju ke IP komputer
         //dimana File PHP tersebut berada
         //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
-        public static final String BASE_URL = "http://maticeh.invicit.com/android/maticehGuru/";
+//        public static final String BASE_URL = "http://maticeh.invicit.com/android/maticehGuru/";
 //        public static final String BASE_URL = "http://192.168.1.20:8080/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://10.107.213.114/maticeh-pk/Android/maticehGuru/";
+        public static final String BASE_URL = "http://192.168.43.170:81/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://192.168.100.15:8080/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://192.168.43.251:8080/maticeh-pk/Android/maticehGuru/";
 
@@ -67,6 +68,8 @@ public class Config {
         public static final String KEY_PESANAN_PEMESAN_ALAMAT = "pemesan_alamat";
         public static final String KEY_PESANAN_MAPEL_NAME = "mapel_name";
         public static final String KEY_PESANAN_JENJANG_NAME = "nama_jenjang";
+        public static final String KEY_PESANAN_KONTAK_GURU = "kontak_guru";
+        public static final String KEY_PESANAN_KONTAK_PEMESAN = "kontak_murid";
 
         public static final String KEY_ABSEN_ID = "id";
         public static final String KEY_ABSEN_ID_PEMESANAN = "id_pemesanan";
