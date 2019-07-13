@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onPostExecute(s);
                 progressDialog.dismiss();
                 Log.d(TAG, "onPostExecute: s = " + s);
-//                Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -139,13 +139,11 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(jsonStr);
                     resultStr = jsonObject.getString("id_pemesanan");
-
                 }catch (JSONException e){
                     e.printStackTrace();
                 }
 
                 RequestHandler requestHandler = new RequestHandler();
-
                 HashMap<String, String> params = new HashMap<>();
                 params.put("id_pemesanan", resultStr);
                 params.put("id_guru", currentUser.getId());

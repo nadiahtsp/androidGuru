@@ -9,7 +9,7 @@ public class Config {
 //        public static final String BASE_URL = "http://maticeh.invicit.com/android/maticehGuru/";
 //        public static final String BASE_URL = "http://192.168.1.20:8080/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://10.107.213.114/maticeh-pk/Android/maticehGuru/";
-        public static final String BASE_URL = "http://192.168.43.170:81/maticeh-pk/Android/maticehGuru/";
+        public static final String BASE_URL = "http://192.168.1.28:8080/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://192.168.100.15:8080/maticeh-pk/Android/maticehGuru/";
 //        public static final String BASE_URL = "http://192.168.43.251:8080/maticeh-pk/Android/maticehGuru/";
 
