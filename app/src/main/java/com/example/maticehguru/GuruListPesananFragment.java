@@ -33,6 +33,9 @@ public class GuruListPesananFragment extends Fragment {
     ArrayList<PesananModel> pesananModels = new ArrayList<>();
     UserModel currentUser;
     Intent currentIntent;
+
+    boolean hasBeenPaused = false;
+
     private static final String TAG = "GuruListPesananFragment";
 
     @Nullable
@@ -43,6 +46,22 @@ public class GuruListPesananFragment extends Fragment {
         getJSON();
 
         return view;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        hasBeenPaused = true;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(hasBeenPaused){
+            hasBeenPaused = false;
+            pesananModels.clear();
+            getJSON();
+        }
     }
 
     private void initRecyclerView(){

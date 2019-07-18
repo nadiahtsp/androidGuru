@@ -24,6 +24,18 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:background="@color/colorMain">
+                    <Button
+                        android:id="@+id/tv_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:layout_alignParentRight="true"
+                        android:text="keluar"
+                        android:textAlignment="center"
+                        android:background="@drawable/button_muda"
+                        android:gravity="start" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -47,7 +59,7 @@
                             android:text="Nama"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textColor="#fff"
-                            android:textSize="30sp" />
+                            android:textSize="25sp" />
 
 
                         <TextView
@@ -55,18 +67,22 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
+                            android:textSize="20sp"
                             android:text="email@email.com"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textColor="#fff" />
 
                         <TextView
                             android:id="@+id/no_hpTV"
+                            android:textSize="20sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="018274689164"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textColor="#fff" />
+
+
 
                     </LinearLayout>
 
@@ -102,7 +118,7 @@
                         tools:ignore="OnClick" />
 
                     <Button
-                    android:id="@+id/btnURL2"
+                    android:id="@+id/btnHelp"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -113,17 +129,6 @@
                     android:background="@drawable/button_bulst"
                     android:gravity="start" />
 
-                    <Button
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:textColor="#fff"
-                        android:textStyle="bold"
-                        android:text="keluar"
-                        android:textAlignment="center"
-                        android:background="@drawable/button_bulst"
-                        android:gravity="start" />
 
                 </LinearLayout>
             </LinearLayout>

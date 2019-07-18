@@ -1,5 +1,6 @@
 package com.example.maticehguru;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -27,10 +28,13 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     UserModel currentUser;
 
+    public static Activity mainActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mainActivity = this;
 
         currentUser = getIntent().getParcelableExtra("currentUser");
 
@@ -126,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onPostExecute(s);
                 progressDialog.dismiss();
                 Log.d(TAG, "onPostExecute: s = " + s);
-//                Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -135,13 +139,11 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(jsonStr);
                     resultStr = jsonObject.getString("id_pemesanan");
-
                 }catch (JSONException e){
                     e.printStackTrace();
                 }
 
                 RequestHandler requestHandler = new RequestHandler();
-
                 HashMap<String, String> params = new HashMap<>();
                 params.put("id_pemesanan", resultStr);
                 params.put("id_guru", currentUser.getId());

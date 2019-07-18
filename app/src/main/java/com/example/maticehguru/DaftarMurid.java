@@ -1,5 +1,6 @@
 package com.example.maticehguru;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -46,16 +47,20 @@ public class DaftarMurid extends AppCompatActivity {
 
     private void getJson(){
         Log.d(TAG, "getJson: called");
+
         class GetJson extends AsyncTask<Void, Void, String>{
+            ProgressDialog loading;
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
+                loading = ProgressDialog.show(DaftarMurid.this, "Fetching...", "Please wait...", false, false);
             }
 
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 Log.d(TAG, "onPostExecute: s = "+s);
+                loading.dismiss();
                 fetchDaftarMurid(s);
             }
 
@@ -87,7 +92,7 @@ public class DaftarMurid extends AppCompatActivity {
             for (int i = 0; i<ja.length(); i++){
                 JSONObject j = ja.getJSONObject(i);
                 String id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, mapel_name;
-                String nama_jenjang;
+                String nama_jenjang, kontak_guru, kontak_murid;
 
                 id = j.getString(Config.KEY_PESANAN_ID);
                 id_guru = j.getString(Config.KEY_PESANAN_ID_GURU);
@@ -106,9 +111,13 @@ public class DaftarMurid extends AppCompatActivity {
                 pemesan_alamat = j.getString(Config.KEY_PESANAN_PEMESAN_ALAMAT);
                 mapel_name = j.getString(Config.KEY_PESANAN_MAPEL_NAME);
                 nama_jenjang = j.getString(Config.KEY_PESANAN_JENJANG_NAME);
+                kontak_guru = j.getString(Config.KEY_PESANAN_KONTAK_GURU);
+                kontak_murid = j.getString(Config.KEY_PESANAN_KONTAK_PEMESAN);
 
                 PesananModel pesananModel = new PesananModel(id, id_guru, id_pemesan, id_mapel, nama_murid, kelas, tgl_pertemuan_pertama, status, created_at, updated_at, guru_name, pemesan_name, pemesan_provinsi, pemesan_kabupaten_kota, pemesan_alamat, mapel_name);
                 pesananModel.setNama_jenjang(nama_jenjang);
+                pesananModel.setKontak_guru(kontak_guru);
+                pesananModel.setKontak_murid(kontak_murid);
 
                 pesananModelArrayList.add(pesananModel);
             }

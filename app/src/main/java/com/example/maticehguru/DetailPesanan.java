@@ -15,7 +15,7 @@ import com.example.maticehguru.Models.UserModel;
 import java.util.HashMap;
 
 public class DetailPesanan extends AppCompatActivity {
-    TextView namaPemesanTV, provinsiTV, kabupatenKotaTV, alamatTV;
+    TextView namaPemesanTV, provinsiTV, kabupatenKotaTV, alamatTV,jadwalTV;
     Button acceptBtn, declineBtn;
 
     UserModel currentUser;
@@ -53,6 +53,7 @@ public class DetailPesanan extends AppCompatActivity {
         provinsiTV = findViewById(R.id.provinsiTV);
         kabupatenKotaTV = findViewById(R.id.kabupatenKotaTV);
         alamatTV = findViewById(R.id.alamatTV);
+        jadwalTV=findViewById(R.id.jadwalTV);
 
         acceptBtn = findViewById(R.id.btnAccept);
         declineBtn = findViewById(R.id.btnDecline);
@@ -60,6 +61,12 @@ public class DetailPesanan extends AppCompatActivity {
         currentUser = getIntent().getParcelableExtra("currentUser");
         currentPesanan = getIntent().getParcelableExtra("currentPesanan");
         idPesananStr = currentPesanan.getId();
+
+        namaPemesanTV.setText(currentPesanan.getNama_murid());
+        provinsiTV.setText(currentPesanan.getPemesan_provinsi());
+        kabupatenKotaTV.setText(currentPesanan.getPemesan_kabupaten_kota());
+        alamatTV.setText(alamatTV.getText().toString()+" "+currentPesanan.getPemesan_alamat());
+        jadwalTV.setText(jadwalTV.getText().toString()+" "+currentPesanan.getTgl_pertemuan_pertama());
     }
 
     private void updatePesanan(final String url, final HashMap<String, String> params){
@@ -69,13 +76,13 @@ public class DetailPesanan extends AppCompatActivity {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                progressDialog = ProgressDialog.show(DetailPesanan.this,"Mohon tunggu...","Pesanan sedang diproses...",false,false);
+               // progressDialog = ProgressDialog.show(DetailPesanan.this,"Mohon tunggu...","Pesanan sedang diproses...",false,false);
             }
 
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-                progressDialog.dismiss();
+                //progressDialog.dismiss();
                 Toast.makeText(DetailPesanan.this, s, Toast.LENGTH_SHORT);
             }
 

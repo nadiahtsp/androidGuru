@@ -3,33 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nootifLL"
-    android:layout_margin="5dp"
     app:cardBackgroundColor="#FFF"
     app:cardCornerRadius="12dp"
     app:cardElevation="3dp"
     app:contentPadding="4dp"
     android:clickable="true">
 
-    <RelativeLayout
+    <!--tanggal diabsen, nama, mapel-->
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:id="@+id/notifRL">
+        android:orientation="vertical"
+        android:layout_margin="10dp">
 
         <TextView
-            android:id="@+id/tv_pesannotifikasi"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Selamat"
-            android:textSize="20sp" />
+            android:id="@+id/tanggalAbsenTV"
+            android:textSize="30sp"
+            android:text="10 April 1998"/>
+
         <TextView
-            android:id="@+id/tv_tglnotifikasi"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tanggal"
-            android:layout_below="@id/tv_pesannotifikasi"
-            android:textSize="20sp" />
-    </RelativeLayout>
+            android:id="@+id/namaMuridTV"
+            android:text="Muhammad Rafi Nugroho"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mapelTV"
+            android:text="Bahasa Thailand SD"/>
+
+    </LinearLayout>
 
 </android.support.v7.widget.CardView>

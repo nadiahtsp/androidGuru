@@ -15,21 +15,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".WebKontak"></activity>
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".DetailDaftarMuridActivity"></activity>
         <activity android:name=".DetailPesanan" />
         <activity android:name=".Absensi" />
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".HistoryActivity"></activity>
         <activity android:name=".JadwalPertemuanActivity" />
         <activity android:name=".DaftarMurid" />
         <activity android:name=".PendapatanActivity" />
         <activity android:name=".RiwayatAbsenGuru" />
-        <activity android:name=".splashActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Web_bantuan" />
         <activity android:name=".MainActivity" />
     </application>
 

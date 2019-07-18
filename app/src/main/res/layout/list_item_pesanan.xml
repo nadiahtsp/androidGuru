@@ -2,6 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/colorMain"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
     android:id="@+id/listPesananLL">
 
     <TextView
@@ -9,11 +12,13 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:id="@+id/namaPemesanTV"
+        android:textColor="#fff"
         android:text="nama pemesan"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#fff"
         android:id="@+id/provinsiTV"
         android:text="provinsi pemesan"/>
 
@@ -21,6 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/kabupatenKotaTV"
+        android:textColor="#fff"
         android:text="kabupaten kota pemesan"/>
 
 

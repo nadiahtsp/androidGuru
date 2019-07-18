@@ -43,7 +43,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/namaTV"
             android:text="Bidang"
-            android:textSize="20sp"
             android:layout_toRightOf="@id/item_image"
             android:textColor="#000"/>
 
@@ -53,7 +52,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/bidangTV"
             android:text="jenjang"
-            android:textSize="20sp"
+            android:layout_toRightOf="@id/item_image"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/kontakMuridTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jenjangTV"
+            android:text="Kontak murid"
             android:layout_toRightOf="@id/item_image"
             android:textColor="#000"/>
     </RelativeLayout>

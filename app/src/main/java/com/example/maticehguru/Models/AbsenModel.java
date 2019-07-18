@@ -4,17 +4,12 @@ public class AbsenModel {
     private String id, id_pemesanan, status, created_at, updated_at;
     private String nama_guru, nama_murid, nama_pemesan, mapel, jenjang;
 
-    public AbsenModel(String id, String id_pemesanan, String status, String created_at, String updated_at, String nama_guru, String nama_murid, String nama_pemesan, String mapel, String jenjang) {
+    public AbsenModel(String id, String id_pemesanan, String status, String created_at, String updated_at) {
         this.id = id;
         this.id_pemesanan = id_pemesanan;
         this.status = status;
         this.created_at = created_at;
         this.updated_at = updated_at;
-        this.nama_guru = nama_guru;
-        this.nama_murid = nama_murid;
-        this.nama_pemesan = nama_pemesan;
-        this.mapel = mapel;
-        this.jenjang = jenjang;
     }
 
     public AbsenModel() {
