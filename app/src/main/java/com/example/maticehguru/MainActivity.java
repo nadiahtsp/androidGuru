@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     UserModel currentUser;
+    boolean backIsPressed = false;
 
     public static Activity mainActivity;
 
@@ -43,6 +45,23 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.guru_fragment_container,
                 new GuruFragmentHome()).commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(backIsPressed){
+            super.onBackPressed();
+        }
+
+        this.backIsPressed = true;
+        Toast.makeText(this, "Press back again to exit", Toast.LENGTH_LONG).show();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                backIsPressed = false;
+            }
+        }, 2000);
     }
 
     @Override

@@ -83,7 +83,7 @@ public class DetailPesanan extends AppCompatActivity {
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 //progressDialog.dismiss();
-                Toast.makeText(DetailPesanan.this, s, Toast.LENGTH_SHORT);
+                Toast.makeText(DetailPesanan.this, s, Toast.LENGTH_SHORT).show();
             }
 
             @Override
